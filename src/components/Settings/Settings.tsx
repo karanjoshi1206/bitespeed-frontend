@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import "./Settings.scss";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { SelectedNodeContext } from "../../App";
@@ -15,6 +15,7 @@ const Settings = () => {
   const handleAddNode = () => {
     addNode(setNodes, nodes);
   };
+
   return (
     <div className="settings-container">
       {selectedNode ? (
@@ -29,7 +30,7 @@ const Settings = () => {
 
           <div className="selected-card">
             <p className="card-type">Text</p>
-            <textarea onChange={handleNodeTextChange} value={selectedNode?.data?.label} name="" id=""></textarea>
+            <textarea onChange={handleNodeTextChange} value={nodes.find((elem)=>elem.id === selectedNode.id)?.data?.label} name="" id=""></textarea>
           </div>
         </>
       ) : (
@@ -45,4 +46,4 @@ const Settings = () => {
   );
 };
 
-export default Settings;
+export default memo(Settings);
