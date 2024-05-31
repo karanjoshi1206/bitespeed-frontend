@@ -1,3 +1,10 @@
-.flow_container{
-    
+.flow_container {
+  // style={{ width: "80vw", height: "100vh", overflow: "hidden" }}
+  width: 80vw;
+  height: 100vh;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    height: 90vh;
+  }
 }

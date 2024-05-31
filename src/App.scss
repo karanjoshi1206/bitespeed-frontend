@@ -1,0 +1,8 @@
+.main_container {
+  display: flex;
+  min-height: 90vh;
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    min-height: 100vh;
+  }
+}

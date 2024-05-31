@@ -14,9 +14,7 @@ const ChatBotFlow = () => {
   }, []);
   return (
     <div className="flow_container">
-      <div style={{ width: "80vw", height: "100vh", overflow: "hidden" }}>
-        <ReactFlowWrapper handleNodeClick={handleNodeClick} setEdges={setEdges} setNodes={setNodes} nodes={nodes} edges={edges} />
-      </div>
+      <ReactFlowWrapper handleNodeClick={handleNodeClick} setEdges={setEdges} setNodes={setNodes} nodes={nodes} edges={edges} />
     </div>
   );
 };
